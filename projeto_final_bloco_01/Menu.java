@@ -27,7 +27,8 @@ public class Menu {
 			System.out.println("║   1 ➜ Cadastrar Produto                            ║");
 			System.out.println("║   2 ➜ Listar Todos os Produtos                     ║");
 			System.out.println("║   3 ➜ Atualizar Produto                            ║");
-			System.out.println("║   4 ➜ Excluir Produto                              ║");
+			System.out.println("║   4 ➜ Buscar produto por Id                        ║");
+			System.out.println("║   5 ➜ Excluir Produto                      	     ║");
 			System.out.println("║   0 ➜ Sair                                         ║");
 			System.out.println("╚════════════════════════════════════════════════════╝");
 
@@ -60,6 +61,10 @@ public class Menu {
 				break;
 
 			case 4:
+				procurarContaPorId();
+				break;
+				
+			case 5:
 				deletarProduto();
 				break;
 
@@ -175,6 +180,14 @@ public class Menu {
 			System.out.println("\nErro: entrada inválida.");
 			leia.nextLine();
 		}
+	}
+	
+	private static void procurarContaPorId() {
+		System.out.println("Digite o id do produto: ");
+		int id = leia.nextInt();
+		leia.nextLine();
+
+		produtoController.procurarPorId(id);
 	}
 
 	private static void deletarProduto() {

@@ -40,6 +40,18 @@ public class ProdutoController implements repository.ProdutoRepository{
 		}
 		
 	}
+	
+	@Override
+	public void procurarPorId(int id) {
+		var produto = buscarNaCollection(id);
+
+		if (produto != null) {
+			produto.visualizar();
+		} else {
+			System.out.printf("O produto de id: %d não foi encontrada!%n", produto);
+		}
+
+	}
 
 	@Override
 	public void deletar(int id) {
@@ -55,7 +67,7 @@ public class ProdutoController implements repository.ProdutoRepository{
 		
 	}
 	
-	public int gerarNumero() {
+	public int gerarId() {
 		return ++id;
 	}
 
