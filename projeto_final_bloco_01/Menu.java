@@ -16,7 +16,7 @@ public class Menu {
 			System.out.println(Cores.TEXT_RED + Cores.ANSI_WHITE_BACKGROUND);
 			System.out.println("╔════════════════════════════════════════════════════╗");
 			System.out.println("║                                                    ║");
-			System.out.println("║              E-COMMERCE LOJA VINIL                 ║");
+			System.out.println("║              E-COMMERCE LOJA VINIL/CD                 ║");
 			System.out.println("║                                                    ║");
 			System.out.println("╠════════════════════════════════════════════════════╣");
 			System.out.println("║                                                    ║");
@@ -33,7 +33,7 @@ public class Menu {
 			opcao = leia.nextInt();
 
 			if (opcao == 0) {
-				System.out.println("\nLoja de vinil!");
+				System.out.println("\nLoja de vinil/cd!");
 				sobre();
 				leia.close();
 				System.exit(0);
