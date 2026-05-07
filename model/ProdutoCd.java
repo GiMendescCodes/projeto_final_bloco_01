@@ -8,6 +8,14 @@ public class ProdutoCd extends Produto {
 		super(id, titulo, quantidade);
 		this.numeroFaixas = numeroFaixas;
 	}
+	
+	public int getNumeroFaixas() {
+		return numeroFaixas;
+	}
+
+	public void setNumeroFaixas(int numeroFaixas) {
+		this.numeroFaixas = numeroFaixas;
+	}
 
 	@Override
 	public void visualizar() {

@@ -8,6 +8,14 @@ public class ProdutoVinil extends Produto {
 		super(id, titulo, quantidade);
 		this.rpm = rpm;
 	}
+	
+	public int getRpm() {
+		return rpm;
+	}
+
+	public void setRpm(int rpm) {
+		this.rpm = rpm;
+	}
 
 	@Override
 	public void visualizar() {
